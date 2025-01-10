@@ -1,0 +1,18 @@
+- name: showing task vars priority
+  hosts: local
+  connection: local
+  vars:
+    course: DevOps
+    Trainer: Vijay
+    Duration: 150hrs
+  tasks:
+  - name: Use variables to print the message
+    ansible.builtin.debug:
+      msg: " {{ course }} is taught by {{ Trainer }} which is {{ Duration }}"
+  - name: Using task variables
+    vars:
+      course: Ansible
+      Trainer: Siva
+      Duration: 10hrs
+    ansible.builtin.debug:
+      msg: " {{ course }} is taught by {{ Trainer }} which is {{ Duration }}"
