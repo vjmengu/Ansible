@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    common_vars.yaml
+  - common_vars.yaml
   tasks:
   - name: Use variables to print the message
     ansible.builtin.debug:
