@@ -1,0 +1,9 @@
+- name: Using variables here
+  hosts: local
+  connection: local
+  vars:
+    common_vars.yaml
+  tasks:
+  - name: Use variables to print the message
+    ansible.builtin.debug:
+      msg: " {{ course }} is taught by {{ Trainer }} which is {{ Duration }}"
