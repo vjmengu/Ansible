@@ -1,7 +1,7 @@
 - name: Using variables here
   hosts: local
   connection: local
-  vars:
+  vars_files:
   - common_vars.yaml
   tasks:
   - name: Use variables to print the message
