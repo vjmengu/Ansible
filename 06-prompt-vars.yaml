@@ -1,0 +1,15 @@
+- name: use prompt to enter the variables
+  hosts: web
+  vars_prompt:
+  - name: course
+    prompt: enter the course you wish to teach
+    private: false
+  - name: trainer
+    prompt: enter the the trainer(your) name
+    private: false
+  - name: duration
+    prompt: enter the hours taught for the courses
+  tasks:
+  - name: printing via user inputs
+    ansible.builtin.debug:
+      msg: " course taught by {{ trainer }} is {{ course }} and is of duration of {{ duration }}"
