@@ -11,10 +11,10 @@
   tasks:
   - name: greaterthan
     ansible.builtin.debug:
-      msg: "{{ num }} is greater than {{ nuc }} "
+      msg: " {{ num }} is greater than {{ nuc }} "
     when: {{ num }} > {{ nuc }}
       
   - name: less than
     ansible.builtin.debug:
-      msg: "{{ num }} is less than {{ nuc }} "
+      msg: " {{ num }} is less than {{ nuc }} "
     when: {{ num }} < {{ nuc }}
