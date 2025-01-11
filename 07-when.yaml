@@ -8,13 +8,13 @@
   - name: nuc
     prompt: enter the 2nd number
     private: false
-  - tasks:
-    - name: greaterthan
-      ansible.builtin.debug:
-        msg: "{{ num }} is greater than {{ nuc }} "
+  tasks:
+  - name: greaterthan
+    ansible.builtin.debug:
+      msg: "{{ num }} is greater than {{ nuc }} "
       #when: {{ num1 }} > {{ num2 }}
       
-    - name: less than
-      ansible.builtin.debug:
-        msg: "{{ nuc }} is less than {{ num }} "
+  - name: less than
+    ansible.builtin.debug:
+      msg: "{{ nuc }} is less than {{ num }} "
       # when: {{ num1 }} < {{ num2 }}
