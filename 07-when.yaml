@@ -2,19 +2,19 @@
   hosts: local
   connection: local
   vars_prompt:
-  - name: num1
+  - name: num
     prompt: enter the 1st number
     private: false
-  - name: num2
+  - name: nuc
     prompt: enter the 2nd number
     private: false
   - tasks:
     - name: greaterthan
       ansible.builtin.debug:
-        msg: "{{ num1 }} is greater than {{ num2 }} "
+        msg: "{{ num }} is greater than {{ nuc }} "
       #when: {{ num1 }} > {{ num2 }}
       
     - name: less than
       ansible.builtin.debug:
-        msg: "{{ num1 }} is less than {{ num2 }} "
+        msg: "{{ nuc }} is less than {{ num }} "
       # when: {{ num1 }} < {{ num2 }}
